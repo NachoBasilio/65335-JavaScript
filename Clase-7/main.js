@@ -119,12 +119,17 @@ function agregadoraDeEventosABotonesQuitar(){
             let elementoABuscar = Carrito.find(el => el.nombre == evento.target.parentElement.children[0].innerText)
 
             if(elementoABuscar.cantidad == 1){
-                let arrayNombres = Carrito.map(el => {
-                    return el.nombre
-                })
+                // let arrayNombres = Carrito.map(el => {
+                //     return el.nombre
+                // })
 
-                let index = arrayNombres.indexOf(evento.target.parentElement.children[0].innerText)
-                Carrito.splice(index, 1)
+                // let index = arrayNombres.indexOf(evento.target.parentElement.children[0].innerText)
+                // Carrito.splice(index, 1)
+
+                //Cambio agregado para mejorar la lógica, findIndex toma un elemento si es necesario.
+                let index = Carrito.findIndex(el => el.nombre === evento.target.parentElement.children[0].innerText);
+                Carrito.splice(index, 1);
+
             }else{
                 elementoABuscar.cantidad = elementoABuscar.cantidad - 1
             }
@@ -134,6 +139,7 @@ function agregadoraDeEventosABotonesQuitar(){
         })
     })
 }
+
 
 function funcionQueActualiza(){
     productosCarrito.innerHTML = ""
