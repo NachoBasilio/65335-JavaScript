@@ -1,0 +1,62 @@
+{
+    "users": [
+      {
+        "id": 1,
+        "name": "John Doe",
+        "email": "john.doe@example.com",
+        "age": 30,
+        "isActive": true
+      },
+      {
+        "id": 2,
+        "name": "Jane Smith",
+        "email": "jane.smith@example.com",
+        "age": 25,
+        "isActive": false
+      },
+      {
+        "id": 3,
+        "name": "Carlos López",
+        "email": "carlos.lopez@example.com",
+        "age": 35,
+        "isActive": true
+      }
+    ],
+    "products": [
+      {
+        "id": 101,
+        "name": "Laptop",
+        "price": 1200.99,
+        "inStock": true
+      },
+      {
+        "id": 102,
+        "name": "Smartphone",
+        "price": 799.49,
+        "inStock": false
+      },
+      {
+        "id": 103,
+        "name": "Headphones",
+        "price": 199.99,
+        "inStock": true
+      }
+    ],
+    "orders": [
+      {
+        "orderId": 1001,
+        "userId": 1,
+        "productIds": [101, 103],
+        "total": 1400.98,
+        "status": "Shipped"
+      },
+      {
+        "orderId": 1002,
+        "userId": 2,
+        "productIds": [102],
+        "total": 799.49,
+        "status": "Pending"
+      }
+    ]
+  }
+  
